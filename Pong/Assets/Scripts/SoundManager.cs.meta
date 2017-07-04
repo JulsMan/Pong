@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: eb9e98381dc993d4882e70221251c158
-timeCreated: 1499142535
+timeCreated: 1499146307
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - WallBounce: {fileID: 8300000, guid: e1b07ede3e6e19d44aaebd3dc20b54a2, type: 3}
+  - PaddleBounce: {fileID: 8300000, guid: ffa000284e0e2114b870e6d3f988bb49, type: 3}
+  - Goal: {instanceID: 0}
+  - Lose: {instanceID: 0}
+  - Win: {instanceID: 0}
+  - Quit: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

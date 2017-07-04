@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip Win;
     public AudioClip Quit;
 
-    private AudioSource soundEffectAudio;
+    private static AudioSource soundEffectAudio;
 
 
     // Use this for initialization

@@ -28,7 +28,7 @@ public class Ball : MonoBehaviour {
         if ((col.gameObject.name == "wall-left") || (col.gameObject.name == "wall-right"))
         {
             // 
-            SoundManager.Instance.PlayOneShot(SoundManager.Instance.Win);
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.WallBounce);
 
             // TODO - update score
         }
