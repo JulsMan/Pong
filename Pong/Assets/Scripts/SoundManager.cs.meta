@@ -1,16 +1,16 @@
 fileFormatVersion: 2
 guid: eb9e98381dc993d4882e70221251c158
-timeCreated: 1499146307
+timeCreated: 1499179181
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - WallBounce: {fileID: 8300000, guid: e1b07ede3e6e19d44aaebd3dc20b54a2, type: 3}
   - PaddleBounce: {fileID: 8300000, guid: ffa000284e0e2114b870e6d3f988bb49, type: 3}
-  - Goal: {instanceID: 0}
-  - Lose: {instanceID: 0}
-  - Win: {instanceID: 0}
-  - Quit: {instanceID: 0}
+  - Goal: {fileID: 8300000, guid: 1c05e35dde9127142b28c706183ebc73, type: 3}
+  - Lose: {fileID: 8300000, guid: 5deabb18155cbe748a924ae2187890b6, type: 3}
+  - Win: {fileID: 8300000, guid: f2d72b46c2262a6469cded0135fb86a8, type: 3}
+  - Quit: {fileID: 8300000, guid: 136ec7e400bc15c489d8684940b39504, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

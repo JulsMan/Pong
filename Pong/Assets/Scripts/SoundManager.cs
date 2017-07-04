@@ -6,6 +6,12 @@ public class SoundManager : MonoBehaviour
 {
 
     public static SoundManager Instance = null;
+    public AudioSource musicSource;
+    public AudioSource soundEffectAudio;
+
+    public float lowPitchRange = .95f;
+    public float highPitchRange = 1.05f;
+
 
     public AudioClip WallBounce;
     public AudioClip PaddleBounce;
@@ -14,11 +20,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip Win;
     public AudioClip Quit;
 
-    private static AudioSource soundEffectAudio;
+    
 
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
 
         if (Instance == null)
@@ -30,6 +36,8 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        DontDestroyOnLoad(gameObject);
+
 
         AudioSource[] sources = GetComponents<AudioSource>();
 
@@ -37,6 +45,8 @@ public class SoundManager : MonoBehaviour
         {
             if (source.clip == null)
             {
+                Debug.Log(source.clip.name);
+
                 soundEffectAudio = source;
 
             }
@@ -49,6 +59,21 @@ public class SoundManager : MonoBehaviour
 
     public void PlayOneShot(AudioClip clip)
     {
-        soundEffectAudio.PlayOneShot(clip);
+        Debug.Assert(clip == null, "clip is null");
+        Debug.Assert(soundEffectAudio == null, "soundEffectAudio is null");
+
+        soundEffectAudio.clip = clip;
+        soundEffectAudio.Play();
+    }
+
+
+    public void RadmonizeSfx(params AudioClip[] clips)
+    {
+        int randomINdex = Random.Range(0, clips.Length);
+        float randomPitch = Random.Range(lowPitchRange, highPitchRange);
+
+        soundEffectAudio.pitch = randomPitch;
+        soundEffectAudio.clip = clips[randomINdex];
+        soundEffectAudio.Play();
     }
 }
